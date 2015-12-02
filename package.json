@@ -1,0 +1,32 @@
+{
+  "name": "babel-plugin-transform-es2015-generator-return",
+  "version": "1.0.0",
+  "description": "Patch Generator.prototype.return",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run patch; mocha --ui tdd; npm run unpatch",
+    "patch": "ln -s .. node_modules/babel-plugin-transform-es2015-generator-return",
+    "unpatch": "rm node_modules/babel-plugin-transform-es2015-generator-return",
+    "prepublish": "babel src -d lib",
+    "dev": "babel src -d lib -w"
+  },
+  "keywords": [
+    "babel-plugin",
+    "generators"
+  ],
+  "author": "hax <johnhax@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-helper-plugin-test-runner": "^6.1.18",
+    "babel-plugin-transform-strict-mode": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "babel-template": "^6.3.0"
+  }
+}
