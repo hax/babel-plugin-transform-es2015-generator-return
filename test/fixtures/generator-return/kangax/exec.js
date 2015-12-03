@@ -1,5 +1,4 @@
 // copy from kangax compat-table: %GeneratorPrototype%.return
-
 function * generator(){
   yield 5; yield 6;
 };
@@ -12,6 +11,11 @@ item = iterator.next();
 passed &= item.value === undefined && item.done === true;
 
 assert.ok(passed);
+
+
+// call return immediately
+var result = function * () {}().return('ok')
+assert.ok(result.done && result.value === 'ok')
 
 
 // copy from kangax compat-table: yield *, iterator closing

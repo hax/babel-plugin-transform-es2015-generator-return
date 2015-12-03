@@ -9,7 +9,16 @@ if (!_GeneratorPrototype.return) {
 	};
 
 	_GeneratorPrototype.return = function (value) {
-		return this.throw(new this._Return(value));
+		const r = new this._Return(value);
+
+		try {
+			return this.throw(r);
+		} catch (e) {
+			return {
+				done: true,
+				value: value
+			};
+		}
 	};
 }
 

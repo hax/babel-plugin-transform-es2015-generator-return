@@ -7,7 +7,13 @@ const patch = template(`
 			constructor(value) { this.value = value }
 		}
 		_GeneratorPrototype.return = function (value) {
-			return this.throw(new this._Return(value))
+			const r = new this._Return(value)
+			try {
+				return this.throw(r)
+			} catch (e) {
+				// assert e === r
+				return {done: true, value: value}
+			}
 		}
 	}
 `)
