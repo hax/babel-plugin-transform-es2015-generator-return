@@ -43,3 +43,28 @@ var gen = (function* generator(){
 gen.next();
 gen['return']();
 // assert.equal(closed, 'ab');
+
+
+// for-of break should close iterator?
+
+// function *gen() {
+// 	let n = 0
+// 	try {
+// 		while (true) { // eslint-disable-line no-constant-condition
+// 			try {
+// 				yield ++n
+// 			} catch (e) {
+// 				console.log('throw', e)
+// 			}
+// 		}
+// 	} finally {
+// 		console.log('unwind')
+// 	}
+// }
+//
+// for (const x of gen()) {
+// 	console.log(x)
+// 	if (x >= 5) break
+// }
+// console.log('ending...')
+// setTimeout(() => {}, 1000)
