@@ -3,7 +3,9 @@
   "version": "1.1.0",
   "description": "Patch Generator.prototype.return for V8",
   "main": "lib/index.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "npm run patch; mocha --ui tdd; npm run unpatch",
     "patch": "ln -s .. node_modules/babel-plugin-transform-es2015-generator-return",
@@ -25,7 +27,7 @@
     "mocha": "^2.3.4"
   },
   "dependencies": {
-    "babel-template": "^6.3.0"
+    "babel-template": "^6.5.0"
   },
   "repository": "hax/babel-plugin-transform-es2015-generator-return"
 }
