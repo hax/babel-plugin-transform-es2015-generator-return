@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "mocha": "mocha --ui tdd",
-    "test": "npm prune; npm run patch; npm run mocha; e=$?; npm run unpatch; exit $e",
+    "test": "npm dedupe; npm run patch; npm run mocha; e=$?; npm run unpatch; exit $e",
     "patch": "ln -s ../../.. node_modules/babel-helper-plugin-test-runner/node_modules/babel-plugin-transform-es2015-generator-return || ln -s .. node_modules/babel-plugin-transform-es2015-generator-return",
     "unpatch": "rm node_modules/babel-helper-plugin-test-runner/node_modules/babel-plugin-transform-es2015-generator-return || rm node_modules/babel-plugin-transform-es2015-generator-return",
     "prepublish": "babel src -d lib",
