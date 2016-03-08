@@ -7,9 +7,7 @@
     "lib"
   ],
   "scripts": {
-    "pretest": "npm run patch",
-    "posttest": "npm run unpatch",
-    "test": "mocha --ui tdd",
+    "test": "npm run patch; mocha --ui tdd; e=$?; npm run unpatch; exit $e",
     "patch": "ln -s .. node_modules/babel-plugin-transform-es2015-generator-return",
     "unpatch": "rm node_modules/babel-plugin-transform-es2015-generator-return",
     "prepublish": "babel src -d lib",
