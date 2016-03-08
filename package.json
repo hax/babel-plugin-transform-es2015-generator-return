@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "files": ["lib"],
   "scripts": {
-    "test": "npm run patch; mocha --ui tdd; npm run unpatch",
+    "mocha": "mocha --ui tdd",
+    "test": "npm run patch; npm run mocha; npm run unpatch",
     "patch": "ln -s .. node_modules/babel-plugin-transform-es2015-generator-return",
     "unpatch": "rm node_modules/babel-plugin-transform-es2015-generator-return",
     "prepublish": "babel src -d lib",
