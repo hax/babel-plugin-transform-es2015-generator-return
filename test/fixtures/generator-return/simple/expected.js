@@ -1,4 +1,4 @@
-const _GeneratorPrototype = Object.getPrototypeOf((function* () {}).prototype);
+const _GeneratorPrototype = Object.getPrototypeOf(function* () {}.prototype);
 
 if (!_GeneratorPrototype.return) {
 	_GeneratorPrototype._Return = class Return {

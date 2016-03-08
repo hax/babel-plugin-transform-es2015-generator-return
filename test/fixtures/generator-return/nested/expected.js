@@ -1,4 +1,4 @@
-const _GeneratorPrototype = Object.getPrototypeOf((function* () {}).prototype);
+const _GeneratorPrototype = Object.getPrototypeOf(function* () {}.prototype);
 
 if (!_GeneratorPrototype.return) {
 	_GeneratorPrototype._Return = class Return {
@@ -33,10 +33,10 @@ function outer() {
 						try {
 							try {
 								let i = 0;
-
 								while (true) yield ++i;
 							} catch (e) {
 								if (e instanceof _GeneratorPrototype._Return) return e.value;
+
 								e;
 							}
 						} catch (e) {

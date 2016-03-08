@@ -1,4 +1,4 @@
-const _GeneratorPrototype = Object.getPrototypeOf((function* () {}).prototype);
+const _GeneratorPrototype = Object.getPrototypeOf(function* () {}.prototype);
 
 if (!_GeneratorPrototype.return) {
 	_GeneratorPrototype._Return = class Return {
@@ -28,6 +28,7 @@ function* foo() {
 			yield bar;
 		} catch (err) {
 			if (err instanceof _GeneratorPrototype._Return) return err.value;
+
 			err;
 		}
 
