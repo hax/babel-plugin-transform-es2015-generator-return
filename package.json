@@ -7,9 +7,12 @@
     "lib"
   ],
   "scripts": {
-    "test": "npm run patch; mocha --ui tdd; e=$?; npm run unpatch; exit $e",
-    "patch": "ln -s .. node_modules/babel-plugin-transform-es2015-generator-return",
-    "unpatch": "rm node_modules/babel-plugin-transform-es2015-generator-return",
+    "mocha": "mocha --ui tdd",
+    "test": "npm run patch; npm run mocha; e=$?; npm run unpatch; exit $e",
+    "patch": "cp test/babel-plugin-transform-es2015-generator-return.js node_modules",
+    "unpatch": "rm node_modules/babel-plugin-transform-es2015-generator-return.js",
+    "patch0": "ln -s .. node_modules/babel-plugin-transform-es2015-generator-return",
+    "unpatch0": "rm node_modules/babel-plugin-transform-es2015-generator-return",
     "prepublish": "babel src -d lib",
     "dev": "babel src -d lib -w"
   },
