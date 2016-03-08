@@ -9,8 +9,8 @@
   "scripts": {
     "mocha": "mocha --ui tdd",
     "test": "npm run patch; npm run mocha; e=$?; npm run unpatch; exit $e",
-    "patch": "cp test/babel-plugin-transform-es2015-generator-return.js node_modules",
-    "unpatch": "rm node_modules/babel-plugin-transform-es2015-generator-return.js",
+    "patch": "ln -s ../../.. node_modules/babel-helper-plugin-test-runner/node_modules/babel-plugin-transform-es2015-generator-return || ln -s .. node_modules/babel-plugin-transform-es2015-generator-return",
+    "unpatch": "rm node_modules/babel-helper-plugin-test-runner/node_modules/babel-plugin-transform-es2015-generator-return || rm node_modules/babel-plugin-transform-es2015-generator-return",
     "patch0": "ln -s .. node_modules/babel-plugin-transform-es2015-generator-return",
     "unpatch0": "rm node_modules/babel-plugin-transform-es2015-generator-return",
     "prepublish": "babel src -d lib",
