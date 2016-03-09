@@ -5,7 +5,9 @@ Patch ES2015 Generator.prototype.return method for V8
 
 [![Build Status](https://travis-ci.org/hax/babel-plugin-transform-es2015-generator-return.svg?branch=master)](https://travis-ci.org/hax/babel-plugin-transform-es2015-generator-return)
 [![Dependency Status](https://david-dm.org/hax/babel-plugin-transform-es2015-generator-return.svg)](https://david-dm.org/hax/babel-plugin-transform-es2015-generator-return)
-[![DevDependency Status](https://david-dm.org/hax/babel-plugin-transform-es2015-generator-return/dev-status.svg)](https://david-dm.org/hax/babel-plugin-transform-es2015-generator-return#info=devDependencies)
+[![DevDependency Status](https://img.shields.io/david/dev/hax/babel-plugin-transform-es2015-generator-return.svg)](https://david-dm.org/hax/babel-plugin-transform-es2015-generator-return#info=devDependencies)
+<!--[![DevDependency Status](https://david-dm.org/hax/babel-plugin-transform-es2015-generator-return/dev-status.svg)](https://david-dm.org/hax/babel-plugin-transform-es2015-generator-return#info=devDependencies)-->
+
 
 
 ## Why this plugin
