@@ -11,7 +11,7 @@
     "test": "npm run patch; npm run mocha; e=$?; npm run unpatch; exit $e",
     "patch": "ln -s .. node_modules/babel-plugin-transform-es2015-generator-return",
     "unpatch": "rm node_modules/babel-plugin-transform-es2015-generator-return",
-    "prepublish": "babel src -d lib",
+    "prepublish": "babel src -d lib && echo \"\nmodule.exports = exports['default'];\" >> lib/index.js",
     "dev": "babel src -d lib -w"
   },
   "keywords": [
