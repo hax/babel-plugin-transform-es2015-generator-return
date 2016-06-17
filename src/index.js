@@ -52,14 +52,16 @@ const wrapGeneratorBody = {
 export default function (t) {
 	return {
 		visitor: {
-			Program(path) {
-				const bindings = {
-					GENERATOR_PROTOTYPE: path.scope.generateUidIdentifier('GeneratorPrototype')
-				}
-				const ctx = {wrapped: false, bindings}
-				path.traverse(wrapGeneratorBody, ctx)
-				if (ctx.wrapped) {
-					path.unshiftContainer('body', patch(bindings))
+			Program: {
+				exit(path) {
+					const bindings = {
+						GENERATOR_PROTOTYPE: path.scope.generateUidIdentifier('GeneratorPrototype')
+					}
+					const ctx = {wrapped: false, bindings}
+					path.traverse(wrapGeneratorBody, ctx)
+					if (ctx.wrapped) {
+						path.unshiftContainer('body', patch(bindings))
+					}
 				}
 			}
 		}
