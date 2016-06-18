@@ -17,7 +17,8 @@
   },
   "keywords": [
     "babel-plugin",
-    "generators"
+    "generators",
+    "Generator.prototype.return"
   ],
   "author": "hax <johnhax@gmail.com>",
   "license": "MIT",
