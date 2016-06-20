@@ -1,7 +1,6 @@
 import { join }	from 'path'
 import { readdirSync, readFileSync, statSync }	from 'fs'
 import { transformFileSync }	from 'babel-core'
-import plugin	from '../src'
 import assert	from 'assert'
 
 describe('Patch Generator.prototype.return', () => {
@@ -10,7 +9,7 @@ describe('Patch Generator.prototype.return', () => {
 		const fixtureDir = join(fixturesDir, caseName)
 		if (!statSync(fixtureDir).isDirectory()) continue
 
-		it(`should ${caseName.split('-').join(' ')}`, () => {
+		it(caseName.split('-').join(' '), () => {
 			const actualPath = join(fixtureDir, 'actual.js')
 			if (existsFile(actualPath)) {
 				const actual = transformFileSync(actualPath).code
