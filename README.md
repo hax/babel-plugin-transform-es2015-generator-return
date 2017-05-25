@@ -1,5 +1,7 @@
 # babel-plugin-transform-es2015-generator-return
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hax/babel-plugin-transform-es2015-generator-return.svg)](https://greenkeeper.io/)
+
 Patch ES2015 Generator.prototype.return method for V8
 
 
