@@ -1,12 +1,11 @@
 language: node_js
 node_js:
+  - "9"
+  - "8"
   - "6"
-  - "5"
   - "4"
-  - "0.12"
+  - "1"
 sudo: false
 cache:
   directories:
     - node_modules
-after_success:
-  - npm run coveralls
